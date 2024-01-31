@@ -2,7 +2,7 @@
   "name": "nodejs-borntodev",
   "version": "1.0.0",
   "description": "Leaning Node.js from BorntoDev",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,7 @@
   "dependencies": {
     "chalk": "^5.3.0",
     "debug": "^4.3.4",
-    "express": "^4.18.2",
+    "express": "^4.17.1",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.3",
     "path": "^0.12.7"
