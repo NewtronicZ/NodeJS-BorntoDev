@@ -3,7 +3,7 @@ import chalk from 'chalk';
 import debug from 'debug';
 import morgan from 'morgan';
 import { fileURLToPath } from 'url';
-import { dirname, join } from 'path'; // Import the 'join' function from the 'path' module
+import { dirname, join } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -13,12 +13,14 @@ const PORT = process.env.PORT;
 
 app.use(morgan('combined'));
 
-// Use the 'join' function to correctly build the path for static files
-app.use(express.static(join(__dirname, 'public')));
+app.set("views", "./src/views");
+app.set("view engine", "ejs")
 
 app.get('/', (req, res) => {
-    res.send('Hello, world!');
-});
+    res.render('index',{username: 'Newza555+'});
+})
+
+app.use(express.static(join(__dirname, 'public')));
 
 app.listen(PORT, () => {
     debug.log(' listening on port: ' + chalk.red(" : "+PORT));
