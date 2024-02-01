@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT;
 
 app.use(morgan('combined'));
 
@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
     res.send('Hello, world!');
 });
 
-app.listen(port, () => {
-    debug.log('listening on port: ' + chalk.red(port));
+app.listen(PORT, () => {
+    debug.log(' listening on port: ' + chalk.red(" : "+PORT));
 });

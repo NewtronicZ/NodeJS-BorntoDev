@@ -4,6 +4,8 @@
   "description": "Leaning Node.js from BorntoDev",
   "main": "App.js",
   "scripts": {
+    "start": "set DEBUG=app & nodemon app.js",
+    "debug": "set DEBUG=* & nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -16,5 +18,12 @@
     "morgan": "^1.10.0",
     "nodemon": "^3.0.3",
     "path": "^0.12.7"
+  },
+  "nodemonConfig":{
+    "restartable":"rs",
+    "delay":2000,
+    "env":{
+      "PORT":3000
+    }
   }
 }
