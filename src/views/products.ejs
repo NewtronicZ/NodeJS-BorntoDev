@@ -9,7 +9,7 @@
   <h1>Products</h1></br>
   <% products.map((product)=>{ %>
     <h4>
-      <a href="/products/<%=product.id%>"><%=product.productTitle %></a>
+      <a href="/products/<%product.id%>"><%=product.productTitle %></a>
     </h4>
     <p>
       <%=product.productDescription%>
