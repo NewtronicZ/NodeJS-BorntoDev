@@ -19,9 +19,9 @@ app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 productRouter.route("/").get((req, res) =>{
-  res.render('products', {
+  res.render('products',
     products,
-  });
+  );
 });
 
 /*productRouter.route("/").get((req, res) =>{

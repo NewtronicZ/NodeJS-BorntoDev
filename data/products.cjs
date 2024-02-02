@@ -1,5 +1,5 @@
-{
-  "products"; [
+module.exports = {
+  "products": [
     {
       "id": 0,
       "productTitle": "น้ำยาล้างจาน",
