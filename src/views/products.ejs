@@ -1,13 +1,3 @@
-<!-- =========
-
-	Template Name: Play
-	Author: UIdeck
-	Author URI: https://uideck.com/
-	Support: https://uideck.com/support/
-	Version: 1.1
-
-========== -->
-
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +9,7 @@
   <h1>รายการสินค้าน้ำยาล้างจาน</h1></br>
   <% products.map((product)=>{ %>
     <h4>
-      <a href="/products/<%product.id%>"><%=product.productTitle %></a>
+      <a href="/products/<%=product.id%>"><%=product.productTitle %></a>
     </h4>
     <p>
       <%=product.productDescription%>
