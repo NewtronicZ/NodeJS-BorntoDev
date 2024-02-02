@@ -4,8 +4,11 @@ import debug from "debug";
 import morgan from "morgan";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
+import products from './data/products.cjs';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+
 const productRouter = express.Router();
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,6 +20,12 @@ app.set("view engine", "ejs");
 
 productRouter.route("/").get((req, res) =>{
   res.render('products', {
+    products,
+  });
+});
+
+/*productRouter.route("/").get((req, res) =>{
+  res.render('products', {
     products: [
       {productTitle:'น้ำยาล้างจาน', productDescription:'น้ำยาล้างจานสูตร 1', productPrice:50},
       {productTitle:'น้ำยาล้างจาน2', productDescription:'น้ำยาล้างจานสูตร 2', productPrice:55},
@@ -25,7 +34,7 @@ productRouter.route("/").get((req, res) =>{
       {productTitle:'น้ำยาล้างจาน5', productDescription:'น้ำยาล้างจานสูตร 5', productPrice:70},
     ],
   });
-});
+});*/
 
 productRouter.route("/1").get((req, res) =>{
   res.send("Hello World! I'm product1");
