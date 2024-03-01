@@ -1,13 +1,9 @@
-import express from "express";
-import chalk from "chalk";
-import debug from "debug";
-import morgan from "morgan";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
-import products from './data/products.cjs';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const express = require('express');
+const chalk = require('chalk');
+const debug = require('debug');
+const morgan = require('morgan');
+const { join } = require('path');
+const products = require("./data/products.json");
 
 const productRouter = express.Router();
 const app = express();

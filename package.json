@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Leaning Node.js from BorntoDev",
   "main": "App.js",
+  "type": "commonjs",
   "scripts": {
     "start": "set DEBUG=app & nodemon app.js",
     "debug": "set DEBUG=* & nodemon app.js",
@@ -10,7 +11,6 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "chalk": "^5.3.0",
     "debug": "^4.3.4",
@@ -22,7 +22,7 @@
   },
   "nodemonConfig": {
     "restartable": "rs",
-    "delay": 2000,
+    "delay": 2000,d
     "env": {
       "PORT": 3000
     }
